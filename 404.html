@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApulianChain - Formazione & Tecnologia Certificata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Lato', 'sans-serif'],
+            },
+            colors: {
+              olive: {
+                50: '#f4f7f2',
+                100: '#e3ebe0',
+                200: '#c5d9be',
+                300: '#9dbf93',
+                400: '#759f69',
+                500: '#558247',
+                600: '#426636',
+                700: '#36512d',
+                800: '#2d4126',
+                900: '#263622',
+              },
+              earth: {
+                50: '#fbf8f3',
+                100: '#f5efe4',
+                200: '#eadbc4',
+                300: '#dec2a0',
+                400: '#d0a276',
+                500: '#c58653',
+                600: '#b86e45',
+                700: '#995639',
+                800: '#7e4733',
+                900: '#663b2c',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c58653;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #995639;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Leaflet custom marker overrides */
+      .leaflet-popup-content-wrapper {
+        border-radius: 0.75rem;
+        padding: 0;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      }
+      .leaflet-popup-content {
+        margin: 0;
+      }
+      /* Hide scrollbar for carousel but allow functionality */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-olive-200 selection:text-olive-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
